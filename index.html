@@ -8,6 +8,31 @@
     <title>  Personal Portfolio Website </title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('TTDWdFPgYJ35NOas-');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+    <!-- <script src="script.js"></script> -->
 </head>
 
 <body>
@@ -30,20 +55,23 @@
     <!-- Home Section Start -->
     <section class="home" id="home">
         <div class="social">
-            <a href="#"><i class='bx bxl-github'></i></a>
-            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="https://github.com/mayuri0723"><i class='bx bxl-github'></i></a>
+            <a href="https://www.linkedin.com/in/mayuri-c-0b4813161/"><i class='bx bxl-linkedin'></i></a>
             <!-- <a href="#"><i class='bx bxl-facebook'></i></a> -->
             <!-- <a href="#"><i class='bx bxl-github'></i></a> -->
         </div>
         <div class="home-img">
-            <img src="main.png" alt="">
+            <img src="\files\coding.png" alt="">
         </div>
         <div class="home-text">
             <span>Hello, I'm</span>
             <h1>Mayuri Chavan</h1>
             <h2>Full Stack Developer</h2>
-            <p>Lorem ipsum dolor sit amet cons <br> adipisicing elit. Minima, consectetur <br> ullam?</p>
-            <a href="\files\Resume-Mayuri-Chavan-FullStack Dev.pdf"  class="btn" download>Download CV</a>
+            <p>I’m a recent graduate of the Modern College of Engineering with a MCA in Computer Applications. 
+                I’m looking for an opportunity to gain experience as a full-stack developer. 
+                In my free time, I enjoy contributing to open-source projects and learning about new technologies.
+               <br> </p>
+            <a href="\files\MayuriChavan.pdf"  class="btn" download>Download CV</a>
         </div>
     </section>
     <!-- Home Section End -->
@@ -56,30 +84,32 @@
         </div>
 
         <div class="about-container">
-            <div class="about-img">
-                <img src="main.png" alt="">
+            <div class="border">
+                <div class="about-img">
+                    <img src="files\profile.jpeg" alt="">
+                   
+                </div>
             </div>
+           
             <div class="about-text">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis beatae eius quae ab consequatur est
-                    perferendis dicta. Ad repellendus perferendis minus sunt error eos dicta enim accusantium ipsum
-                    veniam debitis quasi sint cum fugiat porro quam, blanditiis a ratione quod!</p>
+                <p></p>
                 <div class="information">
                     <div class="info-box">
                         <i class='bx bxs-user'></i>
-                        <span>Name</span>
+                        <span>Mayuri Chavan</span>
                     </div>
 
                     <div class="info-box">
                         <i class='bx bxs-phone'></i>
-                        <span>+1 444 444 4444</span>
+                        <span>+91 9527336026/9545448527</span>
                     </div>
 
                     <div class="info-box">
                         <i class='bx bxs-envelope'></i>
-                        <span>abc@gmail.com</span>
+                        <span>mayurichavan66@gmail.com</span>
                     </div>
                 </div>
-                <a href="#" class="btn">Download Cv</a>
+                <a href="\files\MayuriChavan.pdf" class="btn">Download Cv</a>
             </div>
         </div>
     </section>
@@ -97,35 +127,52 @@
             <div class="bars">
 
                 <div class="bars-box">
-                    <h3>HTML</h3>
+                    <h3>HTML/CSS</h3>
                     <span>94%</span>
                     <div class="light-bar"></div>
                     <div class="percent-bar html-bar"></div>
                 </div>
 
                 <div class="bars-box">
-                    <h3>CSS</h3>
-                    <span>84%</span>
+                    <h3>JavaScript</h3>
+                    <span>74%</span>
                     <div class="light-bar"></div>
                     <div class="percent-bar css-bar"></div>
                 </div>
 
                 <div class="bars-box">
-                    <h3>JavaScript</h3>
-                    <span>74%</span>
+                    <h3>ReactJS</h3>
+                    <span>60%</span>
                     <div class="light-bar"></div>
                     <div class="percent-bar js-bar"></div>
                 </div>
 
                 <div class="bars-box">
-                    <h3>React</h3>
+                    <h3>Node JS</h3>
+                    <span>70%</span>
+                    <div class="light-bar"></div>
+                    <div class="percent-bar react-bar"></div>
+                </div>
+                <div class="bars-box">
+                    <h3>Git/Github</h3>
                     <span>80%</span>
+                    <div class="light-bar"></div>
+                    <div class="percent-bar react-bar"></div>
+                </div>
+                <div class="bars-box">
+                    <h3>MongoDB</h3>
+                    <span>60%</span>
                     <div class="light-bar"></div>
                     <div class="percent-bar react-bar"></div>
                 </div>
             </div>
             <div class="skills-img">
-                <img src="main.png" alt="Skill">
+                <!-- <video src="\files\browser.mp4" alt="Skill"> -->
+                   
+                    <video width="400" height="280"   alt="Skill" autoplay loop playsinline muted>
+                        <source src="\files\browser.mp4" type="video/mp4">
+                       
+                      </video>
             </div>
         </div>
     </section>
@@ -134,7 +181,7 @@
     <section class="services" id="services">
         <div class="heading">
             <h2>Services</h2>
-            <span>Our Services</span>
+            <!-- <span>Our Services</span> -->
         </div>
         <div class="services-content">
 
@@ -155,11 +202,7 @@
                 <a href="#">Learn More</a>
             </div>
 
-            <div class="services-box">
-                <i class='bx bxl-android'></i>
-                <h3>App Development</h3>
-                <a href="#">Learn More</a>
-            </div>
+            
         </div>
     </section>
     <!-- Services Section End -->
@@ -168,14 +211,14 @@
     <section class="contact" id="contact">
         <div class="heading">
             <h2>Contact</h2>
-            <span>Connect With Us</span>
+            <!-- <span>Connect With Us</span> -->
         </div>
         <div class="contact-form">
-            <form action="">
-                <input type="text" placeholder="Your Name">
-                <input type="email" name="" id="" placeholder="Your Email">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Write Message Here..."></textarea>
-                <input type="button" value="Send" class="contact-button">
+            <form action="" method="post">
+                <input type="text" placeholder="Your Name"  name="user_name">
+                <input type="email" name="" id="" placeholder="Your Email"  name="user_email">
+                <textarea name="message" id="" cols="30" rows="10" placeholder="Write Message Here..."></textarea>
+                <input type="submit" class="contact-button" value="Send" >
             </form>
         </div>
     </section>
@@ -195,6 +238,7 @@
         © PortFlix | All Right Reserved.</p>
     </div> -->
     <!-- Javascript -->
+    
     <script src="script.js"></script>
 </body>
 

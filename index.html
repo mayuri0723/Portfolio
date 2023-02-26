@@ -13,7 +13,7 @@
     <script type="text/javascript">
         (function() {
             // https://dashboard.emailjs.com/admin/account
-            emailjs.init('TTDWdFPgYJ35NOas-');
+            emailjs.init('9BffMUuFSLB5xTri3');
         })();
     </script>
     <script type="text/javascript">
@@ -21,7 +21,7 @@
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
                 // generate a five digit number for the contact_number variable
-                this.contact_number.value = Math.random() * 100000 | 0;
+                // this.contact_number.value = Math.random() * 100000 | 0;
                 // these IDs from the previous steps
                 emailjs.sendForm('contact_service', 'contact_form', this)
                     .then(function() {
@@ -213,10 +213,10 @@
             <h2>Contact</h2>
             <!-- <span>Connect With Us</span> -->
         </div>
-        <div class="contact-form">
-            <form action="" method="post">
+        <div class="portcontact-form">
+            <form  id="contact-form">
                 <input type="text" placeholder="Your Name"  name="user_name">
-                <input type="email" name="" id="" placeholder="Your Email"  name="user_email">
+                <input type="email"  id="" placeholder="Your Email"  name="user_email">
                 <textarea name="message" id="" cols="30" rows="10" placeholder="Write Message Here..."></textarea>
                 <input type="submit" class="contact-button" value="Send" >
             </form>

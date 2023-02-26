@@ -355,13 +355,13 @@ span {
   color: #8b8a8f;
 }
 
-.contact-form {
+.portcontact-form {
   display: grid;
   place-items: center;
   margin-top: 2rem;
 }
 
-.contact-form form {
+.portcontact-form form {
   display: flex;
   flex-direction: column;
   width: 650px;
@@ -542,7 +542,7 @@ form textarea {
     justify-content: center;
   }
 
-  .contact-form form {
+  .portcontact-form form {
     width: 300px;
   }
 
@@ -570,7 +570,7 @@ form textarea {
     font-size: 1rem;
   }
 
-  .contact-form form {
+  .portcontact-form form {
     width: 300px;
   }
 
